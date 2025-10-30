@@ -86,7 +86,7 @@ jobs:
         run: |
           set -euo pipefail
           # Pasar variables al shell remoto antes de ejecutar el script
-          ssh -o IdentitiesOnly=no -o StrictHostKeyChecking=yes \
+          ssh -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes \
               ec2-user@"$HOST" "IMAGE='$IMAGE' APP_PORT='$APP_PORT' bash -s" << 'EOF'
           set -euxo pipefail
           if command -v systemctl >/dev/null 2>&1; then
