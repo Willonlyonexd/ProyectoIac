@@ -12,7 +12,7 @@ env:
 
 jobs:
   ci:
-    name: Integracion continua (build y test)
+    name: Integracion continua (build y test) 
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -86,7 +86,7 @@ jobs:
         run: |
           set -euo pipefail
           # Pasar variables al shell remoto antes de ejecutar el script
-          ssh -o IdentitiesOnly=yes -o StrictHostKeyChecking=no \
+          ssh -o IdentitiesOnly=no -o StrictHostKeyChecking=yes \
               ec2-user@"$HOST" "IMAGE='$IMAGE' APP_PORT='$APP_PORT' bash -s" << 'EOF'
           set -euxo pipefail
           if command -v systemctl >/dev/null 2>&1; then
