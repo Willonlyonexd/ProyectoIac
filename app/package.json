@@ -1,7 +1,8 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "type": "module",
   "scripts": {
     "start": "node server.js",
     "test": "node --test"
@@ -9,7 +10,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^5.1.0"
   }
